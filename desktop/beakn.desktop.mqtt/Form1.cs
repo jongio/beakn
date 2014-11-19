@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace beakn.netduino.windows
+namespace beakn.desktop.mqtt
 {
     public partial class Form1 : Form
     {

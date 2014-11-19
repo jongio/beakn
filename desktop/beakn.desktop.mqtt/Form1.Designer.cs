@@ -1,4 +1,4 @@
-﻿namespace beakn.netduino.windows
+﻿namespace beakn.desktop.mqtt
 {
     partial class Form1
     {

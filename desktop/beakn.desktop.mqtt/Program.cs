@@ -11,7 +11,7 @@ using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using config = System.Configuration.ConfigurationManager;
 
-namespace beakn.netduino.windows
+namespace beakn.desktop.mqtt
 {
     static class Program
     {

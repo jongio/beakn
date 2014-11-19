@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace beakn.netduino.windows.Properties
+namespace beakn.desktop.mqtt.Properties
 {
 
 
