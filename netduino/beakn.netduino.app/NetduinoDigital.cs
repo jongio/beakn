@@ -5,39 +5,39 @@ using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace beakn.netduino.app
 {
-    class Netduino
+    class NetduinoDigital : INetduino
     {
-        private OutputPort D10;
-        private OutputPort D11;
-        private OutputPort D12;
+        private OutputPort redLed;
+        private OutputPort yellowLed;
+        private OutputPort greenLed;
 
-        public Netduino() { }
+        public NetduinoDigital() { }
 
         public void Setup()
         {
-            D10 = new OutputPort(Pins.GPIO_PIN_D10, false);
-            D11 = new OutputPort(Pins.GPIO_PIN_D11, false);
-            D12 = new OutputPort(Pins.GPIO_PIN_D12, false);
+            redLed = new OutputPort(Pins.GPIO_PIN_D9, false);
+            yellowLed = new OutputPort(Pins.GPIO_PIN_D10, false);
+            greenLed = new OutputPort(Pins.GPIO_PIN_D11, false);
         }
 
         public void Set(string presence)
         {
-            D10.Write(false);
-            D11.Write(false);
-            D12.Write(false);
+            redLed.Write(false);
+            yellowLed.Write(false);
+            greenLed.Write(false);
 
             switch (presence)
             {
                 case "DoNotDisturb":
                 case "Busy":
-                    D10.Write(true);
+                    redLed.Write(true);
                     return;
                 case "TemporarilyAway":
                 case "Away":
-                    D11.Write(true);
+                    yellowLed.Write(true);
                     return;
                 case "Free":
-                    D12.Write(true);
+                    greenLed.Write(true);
                     return;
                 default:
                     return;

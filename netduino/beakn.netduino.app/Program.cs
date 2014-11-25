@@ -15,12 +15,12 @@ namespace beakn.netduino.app
 {
     public class Program
     {
-        static Netduino netduino;
+        static INetduino netduino;
         static MqttClient mqttClient;
 
         public static void Main()
         {
-            netduino = new Netduino();
+            netduino = NetduinoFactory.Get(config.AppSettings["LedPinType"]);
             netduino.Setup();
 
             mqttClient = new MqttClient(IPAddress.Parse(config.AppSettings["MqttHost"]), int.Parse(config.AppSettings["MqttPort"]), false, null);

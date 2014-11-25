@@ -61,13 +61,14 @@ namespace beakn.netduino.app
                 //FileStream fs = new FileStream(@"\SD\App.config", FileMode.Open, FileAccess.Read);
                 //Load(fs);
 
-                store["MqttHost"] = "54.197.201.43";
-                store["MqttPort"] = "11452";
+                store["MqttHost"] = "212.72.74.21"; //broker.mqttdashboard.com
+                store["MqttPort"] = "1883";
                 store["MqttUsername"] = "";
                 store["MqttPassword"] = "";
                 store["MqttTopic"] = "/beakn/";
                 store["MqttClientName"] = "beakn-netduino-client";
                 store["MqttPairingCode"] = "1";
+                store["LedPinType"] = "Analog";
 
             }
             catch (Exception e)
