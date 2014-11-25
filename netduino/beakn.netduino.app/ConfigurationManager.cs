@@ -58,17 +58,17 @@ namespace beakn.netduino.app
                 //TODO - Research why this wasn't working - likely because Netduino doesn't support the card (SDHC) or it's too big. I think it only supports up to 2GB
                 // A first chance exception of type 'System.NotSupportedException' occurred in Microsoft.SPOT.IO.dll
                 // A first chance exception of type 'System.IO.IOException' occurred in System.IO.dll
-                //FileStream fs = new FileStream(@"\SD\App.config", FileMode.Open, FileAccess.Read);
-                //Load(fs);
+                FileStream fs = new FileStream(@"\SD\App.config", FileMode.Open, FileAccess.Read);
+                Load(fs);
 
-                store["MqttHost"] = "212.72.74.21"; //broker.mqttdashboard.com
-                store["MqttPort"] = "1883";
-                store["MqttUsername"] = "";
-                store["MqttPassword"] = "";
-                store["MqttTopic"] = "/beakn/";
-                store["MqttClientName"] = "beakn-netduino-client";
-                store["MqttPairingCode"] = "1";
-                store["LedPinType"] = "Analog";
+                //store["MqttHost"] = "212.72.74.21"; //broker.mqttdashboard.com
+                //store["MqttPort"] = "1883";
+                //store["MqttUsername"] = "";
+                //store["MqttPassword"] = "";
+                //store["MqttTopic"] = "/beakn/";
+                //store["MqttClientName"] = "beakn-netduino-client";
+                //store["MqttPairingCode"] = "1";
+                //store["LedPinType"] = "Analog";
 
             }
             catch (Exception e)

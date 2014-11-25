@@ -6,6 +6,10 @@ using System.Windows.Forms;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using config = System.Configuration.ConfigurationManager;
+using Microsoft.Win32;
+using System.IO;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace beakn.desktop.mqtt
 {
@@ -20,7 +24,6 @@ namespace beakn.desktop.mqtt
         [STAThread]
         static void Main()
         {
-
             mqttClient = new MqttClient(IPAddress.Parse(config.AppSettings["MqttHost"]), int.Parse(config.AppSettings["MqttPort"]), false, null);
             mqttClient.MqttMsgPublished += client_MqttMsgPublished;
             mqttClient.Connect(config.AppSettings["MqttClientName"] + "-" + config.AppSettings["MqttPairingCode"], config.AppSettings["MqttUsername"], config.AppSettings["MqttPassword"]);
