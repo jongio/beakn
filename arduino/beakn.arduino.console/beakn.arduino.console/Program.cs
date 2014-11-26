@@ -84,6 +84,7 @@ namespace beakn.arduino.console
             try
             {
                 currentAvailability = (ContactAvailability)lyncClient.Self.Contact.GetContactInformation(ContactInformationType.Availability);
+                Console.WriteLine("Availability changed: " + currentAvailability);
                 arduinoSerial.Set(currentAvailability);
             }
             catch (LyncClientException e)
