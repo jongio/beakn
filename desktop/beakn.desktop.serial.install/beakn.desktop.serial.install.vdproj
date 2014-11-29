@@ -58,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7C50234E148051336151BDF8B3D11EC7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FF95CB737CAB47E4A84B9E97835D4006"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -83,6 +77,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8C4ACA36192F2D665409BB11168CDAD6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7C50234E148051336151BDF8B3D11EC7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -157,6 +157,48 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_0A8B227F13AB49FA933267BF030E7781"
+            {
+            "Name" = "8:Primary output from beakn.desktop.serial (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_FF95CB737CAB47E4A84B9E97835D4006"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_A82CB447_E842_40C0_82AD_0749CB74FE3A"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_C21A10B9F88B47FFA23D819B4ADE7FCF"
+            {
+            "Name" = "8:Primary output from beakn.desktop.serial (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_FF95CB737CAB47E4A84B9E97835D4006"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_D6966B88_9F27_4615_8208_8BA55D4821F5"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F1E4EB42A97F4A369AF325FF9D3EA2A6"
+            {
+            "Name" = "8:Primary output from beakn.desktop.serial (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_FF95CB737CAB47E4A84B9E97835D4006"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_03E74AF7_C998_4BE2_A9ED_BCA121A71766"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -372,7 +414,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:beakn.desktop.serial"
         "ProductCode" = "8:{D713AE8F-E3F2-4D3F-9BEB-4A3250BEBDF8}"
-        "PackageCode" = "8:{CB456B3A-29A5-40F3-B6C4-94716D5A0302}"
+        "PackageCode" = "8:{09FE67EF-895A-4E25-8E1A-0A5097D9610E}"
         "UpgradeCode" = "8:{B21C40BB-2604-4A43-B5FF-A20422690D5A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

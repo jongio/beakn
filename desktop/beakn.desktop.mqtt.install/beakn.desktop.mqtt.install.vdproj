@@ -58,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_26712C0957F443B32748EC81445AC1CD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D9684F885DB4497C9EDEDE3C55F3A768"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -83,6 +77,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_EE8C3DEE9F0F70769FA5E63DFE77A21C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_26712C0957F443B32748EC81445AC1CD"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -157,6 +157,48 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_4D340CF30C144BBBB0B3AF9103847801"
+            {
+            "Name" = "8:Primary output from beakn.desktop.mqtt (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_D9684F885DB4497C9EDEDE3C55F3A768"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_3CC170A4_BE2B_4DF5_B8FB_A2C73CB209D1"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_C86639C33C154F56A187A86D351CCE88"
+            {
+            "Name" = "8:Primary output from beakn.desktop.mqtt (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_D9684F885DB4497C9EDEDE3C55F3A768"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_D690BAF6_0424_412D_A0DD_AE51F62CC5AA"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_CB850360B86549D4A6EF38321FE671BA"
+            {
+            "Name" = "8:Primary output from beakn.desktop.mqtt (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_D9684F885DB4497C9EDEDE3C55F3A768"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_665B25B1_3D87_4BED_B746_98A6AE838DEF"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
