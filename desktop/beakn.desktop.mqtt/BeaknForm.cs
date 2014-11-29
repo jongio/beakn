@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace beakn.desktop.mqtt
 {
-    public partial class Form1 : Form
+    public partial class BeaknForm : Form
     {
-        public Form1()
+        public BeaknForm()
         {
             InitializeComponent();
         }

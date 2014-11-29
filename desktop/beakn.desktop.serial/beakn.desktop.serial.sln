@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beakn.desktop.serial", "beakn.desktop.serial.csproj", "{2E6BA4B0-B858-482B-BCAC-33E636B2616F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "beakn.desktop.serial.install", "..\beakn.desktop.serial.install\beakn.desktop.serial.install.vdproj", "{BE4AB183-92C4-4F73-A18B-C8303BFA1B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E6BA4B0-B858-482B-BCAC-33E636B2616F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6BA4B0-B858-482B-BCAC-33E636B2616F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6BA4B0-B858-482B-BCAC-33E636B2616F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6BA4B0-B858-482B-BCAC-33E636B2616F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4AB183-92C4-4F73-A18B-C8303BFA1B19}.Debug|Any CPU.ActiveCfg = Debug
+		{BE4AB183-92C4-4F73-A18B-C8303BFA1B19}.Debug|Any CPU.Build.0 = Debug
+		{BE4AB183-92C4-4F73-A18B-C8303BFA1B19}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

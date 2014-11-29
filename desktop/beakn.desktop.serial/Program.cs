@@ -1,7 +1,11 @@
-﻿using System;
+﻿using lyncx;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace beakn.desktop.mqtt
+namespace beakn.desktop.serial
 {
     static class Program
     {

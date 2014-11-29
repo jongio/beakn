@@ -1,6 +1,6 @@
-﻿namespace beakn.desktop.mqtt
+﻿namespace beakn.desktop.serial
 {
-    partial class Form1
+    partial class BeaknForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // beakn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Form1";
+            this.Name = "beakn";
             this.ShowInTaskbar = false;
             this.Text = "beakn";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
