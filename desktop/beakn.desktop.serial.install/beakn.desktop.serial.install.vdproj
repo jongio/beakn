@@ -413,15 +413,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:beakn.desktop.serial"
-        "ProductCode" = "8:{D713AE8F-E3F2-4D3F-9BEB-4A3250BEBDF8}"
-        "PackageCode" = "8:{09FE67EF-895A-4E25-8E1A-0A5097D9610E}"
+        "ProductCode" = "8:{9844F873-B8CD-4316-B0FE-F66230352782}"
+        "PackageCode" = "8:{91CF2B3F-4A02-4AF9-823B-7FD93569C18D}"
         "UpgradeCode" = "8:{B21C40BB-2604-4A43-B5FF-A20422690D5A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:0.1"
         "Manufacturer" = "8:beakn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -949,7 +949,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FF95CB737CAB47E4A84B9E97835D4006"
             {
-            "SourcePath" = "8:..\\beakn.desktop.serial\\obj\\Debug\\beakn.exe"
+            "SourcePath" = "8:..\\beakn.desktop.serial\\obj\\Release\\beakn.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8B5B91CC8F1B4DE5BA835951B496AC53"
