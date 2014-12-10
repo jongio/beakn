@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beakn", "beakn.csproj", "{C2D46A5E-EDC8-418B-A44D-B6FE9946AD2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lyncx", "..\..\lyncx\lyncx\lyncx.csproj", "{83DE5500-7474-4943-BCC0-25D4EC5BDA64}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "beakn.install", "..\beakn.install\beakn.install.vdproj", "{F3DA18C2-DF2C-498F-B0FA-6936F08B1AE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2D46A5E-EDC8-418B-A44D-B6FE9946AD2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D46A5E-EDC8-418B-A44D-B6FE9946AD2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D46A5E-EDC8-418B-A44D-B6FE9946AD2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D46A5E-EDC8-418B-A44D-B6FE9946AD2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83DE5500-7474-4943-BCC0-25D4EC5BDA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83DE5500-7474-4943-BCC0-25D4EC5BDA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83DE5500-7474-4943-BCC0-25D4EC5BDA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83DE5500-7474-4943-BCC0-25D4EC5BDA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DA18C2-DF2C-498F-B0FA-6936F08B1AE1}.Debug|Any CPU.ActiveCfg = Debug
+		{F3DA18C2-DF2C-498F-B0FA-6936F08B1AE1}.Debug|Any CPU.Build.0 = Debug
+		{F3DA18C2-DF2C-498F-B0FA-6936F08B1AE1}.Release|Any CPU.ActiveCfg = Release
+		{F3DA18C2-DF2C-498F-B0FA-6936F08B1AE1}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

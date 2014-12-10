@@ -1,10 +1,10 @@
 #include <CmdMessenger.h>  // CmdMessenger
 
-const int redPin = 9;
-const int yellowPin = 10;
-const int greenPin = 11;
+const int red = 5;
+const int yellow = 6;
+const int green = 7;
 
-String color = "";
+String msg = "";
 
 // Attach a new CmdMessenger object to the default Serial port
 CmdMessenger cmdMessenger = CmdMessenger(Serial);
@@ -25,24 +25,29 @@ void OnSetLed()
 {
   // Read led state argument, interpret string as boolean
   //ledState = cmdMessenger.readBoolArg();
-  color = cmdMessenger.readStringArg();
+  msg = cmdMessenger.readStringArg();
   
-  if(color == "Busy" || color == "DoNotDisturb"){
-    setColor(255, 0, 0);
-  }else if(color == "Away" || color == "TemporarilyAway"){
-    setColor(0, 0, 255);
-  }else if (color == "Free"){
-    setColor(0, 255, 0);
-  }else{
-    setColor(0, 0, 0);
+  if(msg == "Busy" || msg == "DoNotDisturb"){
+    setColor(red);
+  }else if(msg == "Away" || msg == "TemporarilyAway"){
+    setColor(yellow);
+  }else if (msg == "Free"){
+    setColor(green);
+  }else if (msg == "Offline"){
+    reset(); 
   }
 }
 
-void setColor(int red, int green, int yellow)
+void reset(){
+  digitalWrite(red, LOW);
+  digitalWrite(yellow, LOW);
+  digitalWrite(green, LOW);
+}
+
+void setColor(int color)
 {
-  analogWrite(redPin, red);
-  analogWrite(greenPin, green);
-  analogWrite(yellowPin, yellow);
+  reset();
+  digitalWrite(color, HIGH);
 }
 
 // Setup function
@@ -60,9 +65,9 @@ void setup()
   attachCommandCallbacks();
 
   // set pin for blink LED
-  pinMode(redPin, OUTPUT);
-  pinMode(yellowPin, OUTPUT);
-  pinMode(greenPin, OUTPUT);
+  pinMode(red, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  pinMode(green, OUTPUT);
 }
 
 // Loop function

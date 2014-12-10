@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace lyncx
 {
     public class LyncxClient
     {
-        protected LyncClient lyncClient;
+        protected LyncClient lyncClient = null;
 
         public event AvailabilityChangedEventHandler AvailabilityChanged;
         public delegate void AvailabilityChangedEventHandler(object sender, AvailabilityChangedEventArgs e);
@@ -28,48 +29,31 @@ namespace lyncx
 
         public void Setup()
         {
-            //Listen for events of changes in the state of the client
-            try
+
+            while (lyncClient == null)
             {
-                lyncClient = LyncClient.GetClient();
-            }
-            catch (ClientNotFoundException clientNotFoundException)
-            {
-                Console.WriteLine(clientNotFoundException);
-                return;
-            }
-            catch (NotStartedByUserException notStartedByUserException)
-            {
-                Console.Out.WriteLine(notStartedByUserException);
-                return;
-            }
-            catch (LyncClientException lyncClientException)
-            {
-                Console.Out.WriteLine(lyncClientException);
-                return;
-            }
-            catch (SystemException systemException)
-            {
-                if (IsLyncException(systemException))
+                try
                 {
-                    // Log the exception thrown by the Lync Model API.
-                    Console.WriteLine("Error: " + systemException);
-                    return;
+                    lyncClient = LyncClient.GetClient();
+                    lyncClient.StateChanged -= new EventHandler<ClientStateChangedEventArgs>(Client_StateChanged);
+                    lyncClient.StateChanged += new EventHandler<ClientStateChangedEventArgs>(Client_StateChanged);
+                    
                 }
-                else
+                catch (ClientNotFoundException e)
                 {
-                    // Rethrow the SystemException which did not come from the Lync Model API.
-                    throw;
+                    // Eat this for now.  It just means that the Lync client isn't running on the desktop.  
+                    // TODO figure out a better way to do this.
+                    Thread.Sleep(1000);
                 }
             }
 
-            lyncClient.StateChanged +=
-                new EventHandler<ClientStateChangedEventArgs>(Client_StateChanged);
+            if (lyncClient.Self != null && lyncClient.Self.Contact != null)
+            {
+                lyncClient.Self.Contact.ContactInformationChanged -= new EventHandler<ContactInformationChangedEventArgs>(SelfContact_ContactInformationChanged);
+                lyncClient.Self.Contact.ContactInformationChanged += new EventHandler<ContactInformationChangedEventArgs>(SelfContact_ContactInformationChanged);
 
-            lyncClient.Self.Contact.ContactInformationChanged +=
-                   new EventHandler<ContactInformationChangedEventArgs>(SelfContact_ContactInformationChanged);
-
-            SetAvailability();
+                SetAvailability();
+            }
         }
 
         private void SelfContact_ContactInformationChanged(object sender, ContactInformationChangedEventArgs e)
@@ -89,37 +73,32 @@ namespace lyncx
 
         private void SetAvailability()
         {
-            //Get the current availability value from Lync
-            ContactAvailability currentAvailability = 0;
-            try
+            if (lyncClient.State == ClientState.SignedIn)
             {
+                //Get the current availability value from Lync
+                ContactAvailability currentAvailability = 0;
+
                 currentAvailability = (ContactAvailability)lyncClient.Self.Contact.GetContactInformation(ContactInformationType.Availability);
                 string currentAvailabilityName = Enum.GetName(typeof(ContactAvailability), currentAvailability);
 
                 OnAvailabilityChanged(new AvailabilityChangedEventArgs(currentAvailability, currentAvailabilityName));
-               
-            }
-            catch (LyncClientException e)
-            {
-                Console.WriteLine(e);
-            }
-            catch (SystemException systemException)
-            {
-                if (IsLyncException(systemException))
-                {
-                    // Log the exception thrown by the Lync Model API.
-                    Console.WriteLine("Error: " + systemException);
-                }
-                else
-                {
-                    // Rethrow the SystemException which did not come from the Lync Model API.
-                    throw;
-                }
             }
         }
 
         private void Client_StateChanged(object sender, ClientStateChangedEventArgs e)
         {
+            switch (e.NewState)
+            {
+                case ClientState.SignedIn:
+                    Setup();
+                    break;
+                case ClientState.SigningOut:
+                    OnAvailabilityChanged(new AvailabilityChangedEventArgs(ContactAvailability.Offline, "Offline"));
+                    Setup();
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>
