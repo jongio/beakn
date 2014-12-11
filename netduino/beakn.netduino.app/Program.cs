@@ -8,7 +8,6 @@ using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using config = beakn.netduino.app.ConfigurationManager;
 using System.Text;
 
 namespace beakn.netduino.app
@@ -20,17 +19,17 @@ namespace beakn.netduino.app
 
         public static void Main()
         {
-            netduino = NetduinoFactory.Get(config.AppSettings["LedPinType"]);
+            netduino = NetduinoFactory.Get(ConfigurationManager.LedPinType);
             netduino.Setup();
 
-            mqttClient = new MqttClient(IPAddress.Parse(config.AppSettings["MqttHost"]), int.Parse(config.AppSettings["MqttPort"]), false, null);
-            mqttClient.Connect(config.AppSettings["MqttClientName"] + "-" + config.AppSettings["MqttPairingCode"], config.AppSettings["MqttUsername"], config.AppSettings["MqttPassword"]);
+            mqttClient = new MqttClient(ConfigurationManager.MqttHost, ConfigurationManager.MqttPort, false, null);
+            mqttClient.Connect(ConfigurationManager.MqttClientId, ConfigurationManager.MqttUsername, ConfigurationManager.MqttPassword);
 
 
             mqttClient.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
             mqttClient.MqttMsgSubscribed += client_MqttMsgSubscribed;
 
-            mqttClient.Subscribe(new string[] { config.AppSettings["MqttTopic"] + config.AppSettings["MqttPairingCode"] }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE });
+            mqttClient.Subscribe(new string[] { ConfigurationManager.MqttTopic }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
         }
 
         static void client_MqttMsgSubscribed(object sender, MqttMsgSubscribedEventArgs e)

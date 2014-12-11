@@ -10,7 +10,7 @@ namespace beakn.netduino.app
             {
                 case "Digital": return new NetduinoDigital();
                 case "Analog": return new NetduinoAnalog();
-                default: throw new ArgumentNullException("Set Netduino type in config.");
+                default: throw new ArgumentNullException("Set Netduino type in ConfigurationManager.");
             }
         }
     }

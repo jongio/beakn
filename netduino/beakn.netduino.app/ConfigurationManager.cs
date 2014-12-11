@@ -8,105 +8,30 @@ namespace beakn.netduino.app
 {
     public static class ConfigurationManager
     {
-        public static AppSettings AppSettings;
         static ConfigurationManager()
         {
-            AppSettings = new AppSettings();
-            AppSettings.Load();
-        }
-    }
-
-    public class AppSettings
-    {
-        private const string APPSETTINGS_SECTION = "appSettings";
-        private const string ADD = "add";
-        private const string KEY = "key";
-        private const string VALUE = "value";
-
-        private Hashtable store;
-
-
-        public AppSettings()
-        {
-            store = new Hashtable();
+            
         }
 
-        public string this[string key]
+        public static AppSettings AppSettings = new AppSettings();
+
+        public static string MqttHost = ConfigurationManager.AppSettings["MqttHost"];
+        public static int MqttPort = Convert.ToInt32(ConfigurationManager.AppSettings["MqttPort"].ToString());
+        public static string MqttClientName = ConfigurationManager.AppSettings["MqttClientName"];
+        public static string MqttPairingCode = ConfigurationManager.AppSettings["MqttPairingCode"];
+        public static string MqttClientId = MqttClientName + "-" + Guid.NewGuid().ToString();  // This just needs to be unique per participant in the MQTT pipeline
+        public static string MqttUsername = ConfigurationManager.AppSettings["MqttUsername"];
+        public static string MqttPassword = ConfigurationManager.AppSettings["MqttPassword"];
+        public static string MqttTopicRoot = ConfigurationManager.AppSettings["MqttTopicRoot"];
+        public static string MqttTopic = MqttTopicRoot + MqttPairingCode;
+        public static string LedPinType = ConfigurationManager.AppSettings["LedPinType"];
+        
+        public static bool InvertedPins
         {
             get
             {
-                return GetAppSetting(key);
+                return string.Compare(ConfigurationManager.AppSettings["InvertedPins"].ToLower(), "true") == 0;
             }
         }
-
-        public string GetAppSetting(string key)
-        {
-            return GetAppSetting(key, null);
-        }
-
-        public string GetAppSetting(string key, string defaultValue)
-        {
-            if (!store.Contains(key))
-                return defaultValue;
-            return (string)store[key];
-        }
-
-        public void Load()
-        {
-            try
-            {
-                //TODO - Research why this wasn't working - likely because Netduino doesn't support the card (SDHC) or it's too big. I think it only supports up to 2GB
-                // A first chance exception of type 'System.NotSupportedException' occurred in Microsoft.SPOT.IO.dll
-                // A first chance exception of type 'System.IO.IOException' occurred in System.IO.dll
-                FileStream fs = new FileStream(@"\SD\App.config", FileMode.Open, FileAccess.Read);
-                Load(fs);
-
-                //store["MqttHost"] = "212.72.74.21"; //broker.mqttdashboard.com
-                //store["MqttPort"] = "1883";
-                //store["MqttUsername"] = "";
-                //store["MqttPassword"] = "";
-                //store["MqttTopic"] = "/beakn/";
-                //store["MqttClientName"] = "beakn-netduino-client";
-                //store["MqttPairingCode"] = "1";
-                //store["LedPinType"] = "Analog";
-
-            }
-            catch (Exception e)
-            {
-                Debug.Print(e.ToString());
-            }
-
-        }
-
-        public void Load(Stream xmlStream)
-        {
-            using (XmlReader reader = XmlReader.Create(xmlStream))
-            {
-                while (reader.Read())
-                {
-                    switch (reader.Name)
-                    {
-                        case APPSETTINGS_SECTION:
-                            while (reader.Read())
-                            {
-                                if (reader.Name == APPSETTINGS_SECTION)
-                                    break;
-
-                                if (reader.Name == ADD)
-                                {
-                                    var key = reader.GetAttribute(KEY);
-                                    var value = reader.GetAttribute(VALUE);
-
-                                    //Debug.Print(key + "=" + value);
-                                    store.Add(key, value);
-                                }
-                            }
-
-                            break;
-                    }
-                }
-            }
-        }
-
     }
 }
