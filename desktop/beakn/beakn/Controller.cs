@@ -19,11 +19,16 @@ namespace beakn
             protocol.Setup();
             protocol.SendSuccess += protocol_SendSuccess;
             protocol.SendFailure += protocol_SendFailure;
-
+            protocol.Receive += protocol_Receive;
             lyncx = new LyncxClient();
             lyncx.AvailabilityChanged += lyncx_AvailabilityChanged;
             lyncx.Setup();
 
+        }
+
+        void protocol_Receive(object sender, MessageEventArgs e)
+        {
+            OnLog(new MessageEventArgs(e.Message));
         }
 
         void lyncx_AvailabilityChanged(object sender, AvailabilityChangedEventArgs e)

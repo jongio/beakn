@@ -12,6 +12,7 @@ namespace beakn
     {
         public event MessageEventHandler SendSuccess;
         public event MessageEventHandler SendFailure;
+        public event MessageEventHandler Receive;
 
         public virtual void Send(string message){}
         public virtual void Setup() { }
@@ -29,6 +30,14 @@ namespace beakn
             if (SendFailure != null)
             {
                 SendFailure(this, e);
+            }
+        }
+
+        protected virtual void OnReceive(MessageEventArgs e)
+        {
+            if (Receive != null)
+            {
+                Receive(this, e);
             }
         }
     }

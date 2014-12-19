@@ -12,5 +12,7 @@ namespace beakn
         void Send(string message);
         event MessageEventHandler SendSuccess;
         event MessageEventHandler SendFailure;
+        event MessageEventHandler Receive;
+
     }
 }

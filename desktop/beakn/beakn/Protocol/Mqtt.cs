@@ -17,6 +17,16 @@ namespace beakn
         {
             mqttClient = new MqttClient(Config.MqttHost, Config.MqttPort, false, null);
             mqttClient.Connect(Config.MqttClientId, Config.MqttUsername, Config.MqttPassword);
+
+            // Subscribe to the topic for debugging purposes
+            mqttClient.Subscribe(new string[]{Config.MqttTopic}, new byte[]{MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE});
+            mqttClient.MqttMsgPublishReceived += mqttClient_MqttMsgPublishReceived;
+        }
+
+        void mqttClient_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        {
+            string message = new string(Encoding.UTF8.GetChars(e.Message));
+            OnReceive(new MessageEventArgs(string.Format("Message Received: Message={0}", message)));
         }
 
         public override void Send(string message)

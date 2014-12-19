@@ -62,7 +62,7 @@ namespace beakn.netduino.app
                 store["MqttClientName"] = "beakn-netduino-client";
                 store["MqttClientId"] = store["MqttClientName"] + Guid.NewGuid().ToString();
                 store["LedPinType"] = "Digital";
-                store["InvertedPins"] = "false";
+                store["InvertedPins"] = "true";
             }
             catch (Exception e)
             {

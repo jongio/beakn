@@ -27,25 +27,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2AEA34C7B5E649F136B90417F0CA5017"
-        "OwnerKey" = "8:_2DDF49D57EACE96F141636C7960C07C1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2AEA34C7B5E649F136B90417F0CA5017"
-        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2DDF49D57EACE96F141636C7960C07C1"
+        "MsmKey" = "8:_4688F6CE9BCE1A40FA91058220317D8F"
         "OwnerKey" = "8:_472BBCFBA9064EA27379CD3B6787DF08"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2DDF49D57EACE96F141636C7960C07C1"
+        "MsmKey" = "8:_4688F6CE9BCE1A40FA91058220317D8F"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,6 +51,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_569BFEA2975333FDD495EE07673BF2A1"
+        "OwnerKey" = "8:_4688F6CE9BCE1A40FA91058220317D8F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_569BFEA2975333FDD495EE07673BF2A1"
+        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0B986DA6E31CDD30F2B475C24A970B11"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
@@ -76,25 +82,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2DDF49D57EACE96F141636C7960C07C1"
+        "OwnerKey" = "8:_4688F6CE9BCE1A40FA91058220317D8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2AEA34C7B5E649F136B90417F0CA5017"
+        "OwnerKey" = "8:_569BFEA2975333FDD495EE07673BF2A1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_27D98924BC9CCC74ADBECB6B29F05EEF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0B986DA6E31CDD30F2B475C24A970B11"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -105,7 +105,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\beakn-v0.2.msi"
+        "OutputFilename" = "8:Debug\\beakn-v0.3.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -137,7 +137,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\beakn.v0.2.msi"
+        "OutputFilename" = "8:Release\\beakn.v0.3.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -310,45 +310,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2AEA34C7B5E649F136B90417F0CA5017"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Uc, Version=15.0.4603.1000, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_2AEA34C7B5E649F136B90417F0CA5017"
-                    {
-                    "Name" = "8:Microsoft.Office.Uc.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.Office.Uc.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2DDF49D57EACE96F141636C7960C07C1"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4688F6CE9BCE1A40FA91058220317D8F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Microsoft.Lync.Model, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_2DDF49D57EACE96F141636C7960C07C1"
+                    "_4688F6CE9BCE1A40FA91058220317D8F"
                     {
                     "Name" = "8:Microsoft.Lync.Model.dll"
                     "Attributes" = "3:512"
@@ -386,6 +355,37 @@
                     }
                 }
             "SourcePath" = "8:lyncx.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_569BFEA2975333FDD495EE07673BF2A1"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Office.Uc, Version=15.0.4603.1000, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_569BFEA2975333FDD495EE07673BF2A1"
+                    {
+                    "Name" = "8:Microsoft.Office.Uc.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Office.Uc.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
@@ -458,20 +458,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:beakn v0.2"
-        "ProductCode" = "8:{CCA08E16-7289-4A6C-B268-6CCD1AB413C2}"
-        "PackageCode" = "8:{4E646F0A-9273-4522-9177-F0D3608FD23B}"
+        "ProductName" = "8:beakn v0.3"
+        "ProductCode" = "8:{0E40663E-AD03-46A0-BDFF-03B8A2894786}"
+        "PackageCode" = "8:{2B713BF7-1BA7-4E20-8FF0-D6901E525F0D}"
         "UpgradeCode" = "8:{EBC42F6F-6249-4DF1-896E-A3634688AD4B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.2"
+        "ProductVersion" = "8:0.3"
         "Manufacturer" = "8:beakn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:beakn v0.2"
+        "Title" = "8:beakn v0.3"
         "Subject" = "8:"
         "ARPCONTACT" = "8:beakn"
         "Keywords" = "8:"
@@ -981,7 +981,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
             {
-            "SourcePath" = "8:..\\beakn\\obj\\Debug\\beakn.exe"
+            "SourcePath" = "8:..\\beakn\\obj\\Release\\beakn.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
