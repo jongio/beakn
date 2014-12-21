@@ -12,6 +12,7 @@ namespace beakn
         {
             switch (type.ToLower())
             {
+                case "sparkcore": return new SparkCore();
                 case "mqtt": return new Mqtt();
                 case "serial": return new Serial();
                 default: throw new ArgumentNullException("Set Protocol in config");

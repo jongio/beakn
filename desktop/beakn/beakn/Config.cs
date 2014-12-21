@@ -66,5 +66,8 @@ namespace beakn
             }
         }
 
+        public static string SparkCoreAccessToken = ConfigurationManager.AppSettings["SparkCoreAccessToken"];
+        public static string SparkCoreDeviceId = ConfigurationManager.AppSettings["SparkCoreDeviceId"];
+
     }
 }

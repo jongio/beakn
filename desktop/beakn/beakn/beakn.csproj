@@ -38,6 +38,9 @@
     <Reference Include="M2Mqtt">
       <HintPath>packages\M2Mqtt.3.6\lib\net45\M2Mqtt.dll</HintPath>
     </Reference>
+    <Reference Include="SharpSpark">
+      <HintPath>..\..\..\..\SharpSpark\SharpSpark\bin\Debug\SharpSpark.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -75,6 +78,7 @@
     <Compile Include="Protocol\Protocol.cs" />
     <Compile Include="Protocol\ProtocolFactory.cs" />
     <Compile Include="Protocol\Serial.cs" />
+    <Compile Include="Protocol\SparkCore.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
