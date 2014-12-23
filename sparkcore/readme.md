@@ -1,0 +1,1 @@
+Please see http://blog.jongallant.com/2014/12/beakn-v0-4-diy-lync-status-light.html for instructions on setting up beakn with SparkCore
