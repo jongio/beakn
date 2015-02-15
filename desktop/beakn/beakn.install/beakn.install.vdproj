@@ -81,7 +81,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_60C793A5EDF1CEF8FF37C11D58FEE389"
+        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_60C793A5EDF1CEF8FF37C11D58FEE389"
+        "OwnerKey" = "8:_624E635420BF1B95F77A2510D83213A1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_624E635420BF1B95F77A2510D83213A1"
+        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BD073501AFB44B47BE50BA5EFCE0FE1D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E73F11CA4CFEF75BE10EC1A721E7BCA4"
+        "OwnerKey" = "8:_60C793A5EDF1CEF8FF37C11D58FEE389"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E73F11CA4CFEF75BE10EC1A721E7BCA4"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -95,6 +125,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5516FF7B2AF09C21274D7C6F0564EF3B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EAACD5A9EE14A20C12DF85B86C638BE6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,12 +154,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EAACD5A9EE14A20C12DF85B86C638BE6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2DDF49D57EACE96F141636C7960C07C1"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -142,6 +172,18 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_60C793A5EDF1CEF8FF37C11D58FEE389"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E73F11CA4CFEF75BE10EC1A721E7BCA4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0B986DA6E31CDD30F2B475C24A970B11"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -153,7 +195,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\beakn-v0.4.msi"
+        "OutputFilename" = "8:Debug\\beakn-v0.4.2.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -185,7 +227,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\beakn.v0.4.msi"
+        "OutputFilename" = "8:Release\\beakn.v0.4.2.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -482,6 +524,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_60C793A5EDF1CEF8FF37C11D58FEE389"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:EventSource4Net, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_60C793A5EDF1CEF8FF37C11D58FEE389"
+                    {
+                    "Name" = "8:EventSource4Net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:EventSource4Net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_624E635420BF1B95F77A2510D83213A1"
             {
             "AssemblyRegister" = "3:1"
@@ -496,6 +569,57 @@
                     }
                 }
             "SourcePath" = "8:SharpSpark.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BD073501AFB44B47BE50BA5EFCE0FE1D"
+            {
+            "SourcePath" = "8:..\\..\\..\\design\\windows-icon.ico"
+            "TargetName" = "8:windows-icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E73F11CA4CFEF75BE10EC1A721E7BCA4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:slf4net, Version=0.1.32.1, Culture=neutral, PublicKeyToken=592edb3b6b36b5ba, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E73F11CA4CFEF75BE10EC1A721E7BCA4"
+                    {
+                    "Name" = "8:slf4net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:slf4net.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
@@ -599,26 +723,26 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:beakn v0.4"
-        "ProductCode" = "8:{B94D9CCA-8D03-4FC3-BE26-DC00309AD5BA}"
-        "PackageCode" = "8:{33042F96-B98C-4F5E-B554-C12DA28B9DD2}"
+        "ProductName" = "8:beakn v0.4.2"
+        "ProductCode" = "8:{C7C5C072-8D35-4520-89E7-1DD9BC7A7DB7}"
+        "PackageCode" = "8:{9A757EB6-47E2-4EB1-BC09-8706B55A6C74}"
         "UpgradeCode" = "8:{EBC42F6F-6249-4DF1-896E-A3634688AD4B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.4"
+        "ProductVersion" = "8:0.4.2"
         "Manufacturer" = "8:beakn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:beakn v0.4"
+        "Title" = "8:beakn v0.4.2"
         "Subject" = "8:"
         "ARPCONTACT" = "8:beakn"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPURLINFOABOUT" = "8:http://jongallant.com"
+        "ARPPRODUCTICON" = "8:_BD073501AFB44B47BE50BA5EFCE0FE1D"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"

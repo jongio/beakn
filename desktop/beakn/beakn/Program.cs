@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace beakn
 {
     static class Program
     {
-        private static Controller controller = new Controller();
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,14 +17,11 @@ namespace beakn
 
             try
             {
-                controller.Setup();
-
                 #region Windows Forms Init
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Beakn(controller));
+                Application.Run(new Beakn());
                 #endregion
-
             }
             catch (Exception e)
             {

@@ -1,8 +1,10 @@
-﻿using Maybe5.SharpSpark;
+﻿using EventSource4Net;
+using Maybe5.SharpSpark;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace beakn
@@ -10,10 +12,33 @@ namespace beakn
     public class SparkCore : Protocol
     {
         private SparkClient sparkClient;
+        private EventSource eventSource;
 
         public override void Setup()
         {
-            sparkClient = new SparkClient(Config.SparkCoreAccessToken, Config.SparkCoreDeviceId);
+            if (!IsConfigValid())
+            {
+                throw new ArgumentNullException("", "Please enter your Spark Core Device Id and Access Token in Settings dialog.");
+            }
+            else
+            {
+                sparkClient = new SparkClient(Properties.Settings.Default.AccessToken, Properties.Settings.Default.DeviceId);
+
+                eventSource = sparkClient.GetEventStream();
+                eventSource.EventReceived += eventSource_EventReceived;
+                eventSource.Start(new CancellationToken());
+            }
+        }
+
+        private bool IsConfigValid()
+        {
+            return !string.IsNullOrEmpty(Properties.Settings.Default.AccessToken) || !string.IsNullOrEmpty(Properties.Settings.Default.DeviceId);
+        }
+
+        void eventSource_EventReceived(object sender, ServerSentEventReceivedEventArgs e)
+        {
+            if (string.Compare(e.Message.EventType, "spark/status", true) == 0)
+                OnEventReceived(e);
         }
 
         public override void Send(string message)

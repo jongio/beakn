@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventSource4Net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace beakn
     {
         void Setup();
         void Send(string message);
-        event MessageEventHandler SendSuccess;
-        event MessageEventHandler SendFailure;
-        event MessageEventHandler Receive;
-
+        event EventHandler<MessageEventArgs> SendSuccess;
+        event EventHandler<MessageEventArgs> SendFailure;
+        event EventHandler<MessageEventArgs> MessageReceived;
+        event EventHandler<ServerSentEventReceivedEventArgs> EventReceived;
     }
 }

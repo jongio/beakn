@@ -12,23 +12,52 @@ namespace beakn
 {
     public partial class Beakn : Form
     {
-        public Beakn(Controller controller)
+        private static Controller controller = new Controller();
+        private int maxLogLength = 1000;
+
+        public Beakn()
         {
             InitializeComponent();
             controller.Log += controller_Log;
-
-            
+            setupController();
         }
 
-        void bgw_DoWork(object sender, DoWorkEventArgs e)
+        void setupController()
         {
-            throw new NotImplementedException();
+            try
+            {
+                controller.Setup();
+            }
+            catch (ArgumentNullException e)
+            {
+                MessageBox.Show(e.Message, this.Text);
+                showSettingsDialog();
+            }
+        }
+
+        void showSettingsDialog()
+        {
+            using (var settings = new Settings())
+            {
+                if (settings.ShowDialog(this) == DialogResult.OK)
+                {
+                    setupController();
+                }
+            }
         }
 
         void controller_Log(object sender, MessageEventArgs e)
         {
-            if (ControlInvokeRequired(textBox1, () => controller_Log(sender, e))) return;
-            textBox1.Text = e.Message + Environment.NewLine + textBox1.Text;
+            if (ControlInvokeRequired(logBox, () => controller_Log(sender, e))) return;
+
+            // Do some trimming so we don't bloat the beakn.exe process
+            var log = string.Concat(DateTime.Now, Environment.NewLine, e.Message, Environment.NewLine, Environment.NewLine, logBox.Text);
+            if (log.Length > maxLogLength)
+            {
+                log = log.Substring(0, maxLogLength - 1);
+            }
+
+            logBox.Text = log;
         }
 
         /// <summary>
@@ -44,6 +73,19 @@ namespace beakn
             else return false;
 
             return true;
+        }
+
+        private void settingsLabel_Click(object sender, EventArgs e)
+        {
+            showSettingsDialog();
+        }
+
+        private void Beakn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Closing this form will shutdown beakn and your status light will not reflect your current status. Are you sure you want to quit beakn?", this.Text, MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

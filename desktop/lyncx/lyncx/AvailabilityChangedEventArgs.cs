@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace lyncx
 {
-    public class AvailabilityChangedEventArgs : EventArgs
+    public class AvailabilityEventArgs : EventArgs
     {
-        public AvailabilityChangedEventArgs(ContactAvailability availability, string availabilityName)
+        public AvailabilityEventArgs(Availability availability)
         {
             this.Availability = availability;
-            this.AvailabilityName = availabilityName;
         }
 
-        public ContactAvailability Availability { get; set; }
-        public string AvailabilityName { get; set; }
+        public Availability Availability { get; set; }
     }
 }

@@ -35,11 +35,19 @@
     <Reference Include="CommandMessenger">
       <HintPath>..\..\..\..\..\..\Users\jong\Downloads\CmdMessenger-3.6\CmdMessenger\CSharp\CommandMessenger\bin\Debug\CommandMessenger.dll</HintPath>
     </Reference>
+    <Reference Include="EventSource4Net, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\EventSource4Net.0.4.0.0\lib\net45\EventSource4Net.dll</HintPath>
+    </Reference>
     <Reference Include="M2Mqtt">
       <HintPath>packages\M2Mqtt.3.6\lib\net45\M2Mqtt.dll</HintPath>
     </Reference>
     <Reference Include="SharpSpark">
       <HintPath>..\..\..\..\SharpSpark\SharpSpark\bin\Debug\SharpSpark.dll</HintPath>
+    </Reference>
+    <Reference Include="slf4net, Version=0.1.32.1, Culture=neutral, PublicKeyToken=592edb3b6b36b5ba, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\slf4net.0.1.32.1\lib\net35\slf4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -79,6 +87,15 @@
     <Compile Include="Protocol\ProtocolFactory.cs" />
     <Compile Include="Protocol\Serial.cs" />
     <Compile Include="Protocol\SparkCore.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Beakn.resx">
+      <DependentUpon>Beakn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

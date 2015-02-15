@@ -13,12 +13,11 @@ namespace lyncx
     {
         protected LyncClient lyncClient = null;
 
-        public event AvailabilityChangedEventHandler AvailabilityChanged;
-        public delegate void AvailabilityChangedEventHandler(object sender, AvailabilityChangedEventArgs e);
+        public event EventHandler<AvailabilityEventArgs> AvailabilityChanged;
 
-        protected virtual void OnAvailabilityChanged(AvailabilityChangedEventArgs e)
+        protected virtual void OnAvailabilityChanged(AvailabilityEventArgs e)
         {
-            AvailabilityChangedEventHandler handler = AvailabilityChanged;
+            EventHandler<AvailabilityEventArgs> handler = AvailabilityChanged;
             if (handler != null)
             {
                 handler(this, e);
@@ -37,7 +36,7 @@ namespace lyncx
                     lyncClient = LyncClient.GetClient();
                     lyncClient.StateChanged -= new EventHandler<ClientStateChangedEventArgs>(Client_StateChanged);
                     lyncClient.StateChanged += new EventHandler<ClientStateChangedEventArgs>(Client_StateChanged);
-                    
+
                 }
                 catch (ClientNotFoundException e)
                 {
@@ -53,6 +52,24 @@ namespace lyncx
                 lyncClient.Self.Contact.ContactInformationChanged += new EventHandler<ContactInformationChangedEventArgs>(SelfContact_ContactInformationChanged);
 
                 SetAvailability();
+            }
+        }
+
+        public Availability Availability
+        {
+            get
+            {
+                if (lyncClient != null && lyncClient.State == ClientState.SignedIn)
+                {
+                    //Get the current availability value from Lync
+                    ContactAvailability contactAvailability = 0;
+
+                    contactAvailability = (ContactAvailability)lyncClient.Self.Contact.GetContactInformation(ContactInformationType.Availability);
+                    string availabilityName = Enum.GetName(typeof(ContactAvailability), contactAvailability);
+
+                    return new Availability(contactAvailability, availabilityName);
+                }
+                return null;
             }
         }
 
@@ -73,15 +90,10 @@ namespace lyncx
 
         private void SetAvailability()
         {
-            if (lyncClient.State == ClientState.SignedIn)
+            var availability = this.Availability;
+            if (availability != null)
             {
-                //Get the current availability value from Lync
-                ContactAvailability currentAvailability = 0;
-
-                currentAvailability = (ContactAvailability)lyncClient.Self.Contact.GetContactInformation(ContactInformationType.Availability);
-                string currentAvailabilityName = Enum.GetName(typeof(ContactAvailability), currentAvailability);
-
-                OnAvailabilityChanged(new AvailabilityChangedEventArgs(currentAvailability, currentAvailabilityName));
+                OnAvailabilityChanged(new AvailabilityEventArgs(availability));
             }
         }
 
@@ -93,7 +105,7 @@ namespace lyncx
                     Setup();
                     break;
                 case ClientState.SigningOut:
-                    OnAvailabilityChanged(new AvailabilityChangedEventArgs(ContactAvailability.Offline, "Offline"));
+                    OnAvailabilityChanged(new AvailabilityEventArgs(new Availability(ContactAvailability.Offline, "Offline")));
                     Setup();
                     break;
                 default:

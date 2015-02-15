@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventSource4Net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace beakn
 {
-    public delegate void MessageEventHandler(object sender, MessageEventArgs e);
-
     public class Protocol : IProtocol
     {
-        public event MessageEventHandler SendSuccess;
-        public event MessageEventHandler SendFailure;
-        public event MessageEventHandler Receive;
+        public event EventHandler<MessageEventArgs> SendSuccess;
+        public event EventHandler<MessageEventArgs> SendFailure;
+        public event EventHandler<MessageEventArgs> MessageReceived;
+        public event EventHandler<ServerSentEventReceivedEventArgs> EventReceived;
 
         public virtual void Send(string message){}
         public virtual void Setup() { }
@@ -33,11 +33,19 @@ namespace beakn
             }
         }
 
-        protected virtual void OnReceive(MessageEventArgs e)
+        protected virtual void OnMessageReceived(MessageEventArgs e)
         {
-            if (Receive != null)
+            if (MessageReceived != null)
             {
-                Receive(this, e);
+                MessageReceived(this, e);
+            }
+        }
+
+        protected virtual void OnEventReceived(ServerSentEventReceivedEventArgs e)
+        {
+            if (EventReceived != null)
+            {
+                EventReceived(this, e);
             }
         }
     }

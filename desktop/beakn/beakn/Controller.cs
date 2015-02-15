@@ -16,14 +16,21 @@ namespace beakn
         public void Setup()
         {
             protocol = ProtocolFactory.Get(Config.Protocol);
-            protocol.Setup();
             protocol.SendSuccess += protocol_SendSuccess;
             protocol.SendFailure += protocol_SendFailure;
-            protocol.Receive += protocol_Receive;
+            protocol.MessageReceived += protocol_Receive;
+            protocol.EventReceived += protocol_EventReceived;
+
+            protocol.Setup();
+            
             lyncx = new LyncxClient();
             lyncx.AvailabilityChanged += lyncx_AvailabilityChanged;
             lyncx.Setup();
+        }
 
+        void protocol_EventReceived(object sender, EventSource4Net.ServerSentEventReceivedEventArgs e)
+        {
+            sendAvailability(sender, new AvailabilityEventArgs(lyncx.Availability));
         }
 
         void protocol_Receive(object sender, MessageEventArgs e)
@@ -31,11 +38,16 @@ namespace beakn
             OnLog(new MessageEventArgs(e.Message));
         }
 
-        void lyncx_AvailabilityChanged(object sender, AvailabilityChangedEventArgs e)
+        void lyncx_AvailabilityChanged(object sender, AvailabilityEventArgs e)
+        {
+            sendAvailability(sender, e);
+        }
+
+        void sendAvailability(object sender, AvailabilityEventArgs e)
         {
             try
             {
-                protocol.Send(e.AvailabilityName);
+                protocol.Send(e.Availability.AvailabilityName);
             }
             catch (Exception ex)
             {
@@ -53,12 +65,11 @@ namespace beakn
             OnLog(new MessageEventArgs("Send Success - Message: " + e.Message));
         }
 
-        public event LogEventHandler Log;
-        public delegate void LogEventHandler(object sender, MessageEventArgs e);
+        public event EventHandler<MessageEventArgs> Log;
 
         protected virtual void OnLog(MessageEventArgs e)
         {
-            LogEventHandler handler = Log;
+            EventHandler<MessageEventArgs> handler = Log;
             if (handler != null)
             {
                 handler(this, e);

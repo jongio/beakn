@@ -26,7 +26,7 @@ namespace beakn
         void mqttClient_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
             string message = new string(Encoding.UTF8.GetChars(e.Message));
-            OnReceive(new MessageEventArgs(string.Format("Message Received: Message={0}", message)));
+            OnMessageReceived(new MessageEventArgs(string.Format("Message Received: Message={0}", message)));
         }
 
         public override void Send(string message)
