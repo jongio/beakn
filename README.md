@@ -1,8 +1,11 @@
 beakn
 =====
-beakn is a DIY Lync Status light. Find your micro-controller dev board below and start building!
 
-If you want to install the beakn Windows desktop client from an MSI instead of source you should always get the latest MSI from here: https://github.com/jonbgallant/beakn/releases
+beakn is a Lync Status light built with a [Spark Core or Photon](https://store.spark.io/). You can find a step-by-step guide for the latest version here: http://blog.jongallant.com/search/label/beakn
+
+Always install the latest beakn.exe client from here: https://github.com/jonbgallant/beakn/releases
+
+Before I decided to go with Spark I played around with a few other options. Blog posts detailing my experience for each of them are below.
 
 ##Arduino
 http://blog.jongallant.com/2014/12/beakn-v0-1-diy-lync-status-light.html (USB) or http://blog.jongallant.com/2014/12/beakn-v0-2-diy-lync-status-light.html (Ethernet/MQTT)
