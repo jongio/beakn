@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_331B9D43013FB9C928DD09200BCEB971"
+        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3C83CC50B18A2C2789C1C0A5C88B565C"
         "OwnerKey" = "8:_EF7DCFFEA5B82008521DA6AB97143208"
         "MsmSig" = "8:_UNDEFINED"
@@ -93,25 +99,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_717EBFD674ECA8963330902D27AE9134"
-        "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_72933BAA2BAB9A9DE94602B9C68E3C15"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9676E263BB714B6D14B592E853F3450D"
+        "MsmKey" = "8:_85C73EA343B2F77966D4C9A153F9ED30"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A2D7C335EF5FC1AC6D88D4399D6C1F8E"
+        "MsmKey" = "8:_9676E263BB714B6D14B592E853F3450D"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -124,7 +124,7 @@
         "Entry"
         {
         "MsmKey" = "8:_EF7DCFFEA5B82008521DA6AB97143208"
-        "OwnerKey" = "8:_717EBFD674ECA8963330902D27AE9134"
+        "OwnerKey" = "8:_85C73EA343B2F77966D4C9A153F9ED30"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -143,12 +143,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_717EBFD674ECA8963330902D27AE9134"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -178,6 +172,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_85C73EA343B2F77966D4C9A153F9ED30"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_EF7DCFFEA5B82008521DA6AB97143208"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -190,7 +190,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A2D7C335EF5FC1AC6D88D4399D6C1F8E"
+        "OwnerKey" = "8:_331B9D43013FB9C928DD09200BCEB971"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -399,6 +399,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_331B9D43013FB9C928DD09200BCEB971"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:M2Mqtt.Net, Version=4.3.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_331B9D43013FB9C928DD09200BCEB971"
+                    {
+                    "Name" = "8:M2Mqtt.Net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:M2Mqtt.Net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3C83CC50B18A2C2789C1C0A5C88B565C"
             {
             "AssemblyRegister" = "3:1"
@@ -554,37 +585,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_717EBFD674ECA8963330902D27AE9134"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:lyncx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_717EBFD674ECA8963330902D27AE9134"
-                    {
-                    "Name" = "8:lyncx.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:lyncx.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_72933BAA2BAB9A9DE94602B9C68E3C15"
             {
             "AssemblyRegister" = "3:1"
@@ -616,20 +616,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9676E263BB714B6D14B592E853F3450D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_85C73EA343B2F77966D4C9A153F9ED30"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CommandMessenger.Transport.Serial, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:lyncx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_9676E263BB714B6D14B592E853F3450D"
+                    "_85C73EA343B2F77966D4C9A153F9ED30"
                     {
-                    "Name" = "8:CommandMessenger.Transport.Serial.dll"
+                    "Name" = "8:lyncx.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CommandMessenger.Transport.Serial.dll"
+            "SourcePath" = "8:lyncx.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
@@ -647,20 +647,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A2D7C335EF5FC1AC6D88D4399D6C1F8E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9676E263BB714B6D14B592E853F3450D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:M2Mqtt, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CommandMessenger.Transport.Serial, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A2D7C335EF5FC1AC6D88D4399D6C1F8E"
+                    "_9676E263BB714B6D14B592E853F3450D"
                     {
-                    "Name" = "8:M2Mqtt.dll"
+                    "Name" = "8:CommandMessenger.Transport.Serial.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:M2Mqtt.dll"
+            "SourcePath" = "8:CommandMessenger.Transport.Serial.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
@@ -815,20 +815,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:beakn v0.4.3"
-        "ProductCode" = "8:{F634F109-026A-48FA-9372-830FBF75F27E}"
-        "PackageCode" = "8:{850A58F7-A2BB-4FA6-A798-32ED1E956999}"
+        "ProductName" = "8:beakn v0.4.4-beta"
+        "ProductCode" = "8:{35A606E9-BCD4-4C8D-846D-60718AAF664E}"
+        "PackageCode" = "8:{55A9B2EF-93DE-46B9-8AC6-13060800D166}"
         "UpgradeCode" = "8:{EBC42F6F-6249-4DF1-896E-A3634688AD4B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.4.3"
+        "ProductVersion" = "8:0.4.4"
         "Manufacturer" = "8:beakn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:beakn v0.4.3"
+        "Title" = "8:beakn v0.4.4-beta"
         "Subject" = "8:"
         "ARPCONTACT" = "8:beakn"
         "Keywords" = "8:"
@@ -1338,7 +1338,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_53CAB1814AB8492AB9D02C6DC4F2CF8F"
             {
-            "SourcePath" = "8:..\\beakn\\obj\\Release\\beakn.exe"
+            "SourcePath" = "8:..\\beakn\\obj\\Debug\\beakn.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B7506549807F4456AA36007FABBADAC3"
