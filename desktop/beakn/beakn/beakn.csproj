@@ -32,18 +32,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandMessenger">
-      <HintPath>..\..\..\..\..\..\Users\jong\Downloads\CmdMessenger-3.6\CmdMessenger\CSharp\CommandMessenger\bin\Debug\CommandMessenger.dll</HintPath>
+    <Reference Include="CommandMessenger, Version=3.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\Arduino-CmdMessenger\extras\CSharp\CommandMessenger\bin\Release\CommandMessenger.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandMessenger.Transport.Serial, Version=3.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\Arduino-CmdMessenger\extras\CSharp\CommandMessenger.Transport.Serial\bin\Release\CommandMessenger.Transport.Serial.dll</HintPath>
     </Reference>
     <Reference Include="EventSource4Net, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\EventSource4Net.0.4.0.0\lib\net45\EventSource4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="M2Mqtt">
       <HintPath>packages\M2Mqtt.3.6\lib\net45\M2Mqtt.dll</HintPath>
     </Reference>
-    <Reference Include="SharpSpark">
-      <HintPath>..\..\..\..\SharpSpark\SharpSpark\bin\Debug\SharpSpark.dll</HintPath>
+    <Reference Include="SharpSpark, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\external\SharpSpark\SharpSpark\bin\Release\SharpSpark.dll</HintPath>
     </Reference>
     <Reference Include="slf4net, Version=0.1.32.1, Culture=neutral, PublicKeyToken=592edb3b6b36b5ba, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

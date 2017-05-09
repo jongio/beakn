@@ -1,0 +1,6 @@
+[submodule "external/Arduino-CmdMessenger"]
+	path = external/Arduino-CmdMessenger
+	url = https://github.com/jonbgallant/Arduino-CmdMessenger.git
+[submodule "external/SharpSpark"]
+	path = external/SharpSpark
+	url = https://github.com/jonbgallant/SharpSpark.git

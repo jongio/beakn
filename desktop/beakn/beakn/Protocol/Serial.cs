@@ -1,11 +1,6 @@
 ﻿using CommandMessenger;
-using CommandMessenger.TransportLayer;
+using CommandMessenger.Transport.Serial;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace beakn
 {
@@ -23,13 +18,11 @@ namespace beakn
             serialTransport.CurrentSerialSettings.DtrEnable = Config.SerialDtrEnable;     // For some boards (e.g. Sparkfun Pro Micro) DtrEnable may need to be true.
 
             // Initialize the command messenger with the Serial Port transport layer
-            cmdMessenger = new CmdMessenger(serialTransport);
-
             // Tell CmdMessenger if it is communicating with a 16 or 32 bit Arduino board
-            cmdMessenger.BoardType = Config.SerialBoardType;
+            cmdMessenger = new CmdMessenger(serialTransport, Config.SerialBoardType);
 
             // Start listening
-            cmdMessenger.StartListening();
+            cmdMessenger.Connect();
         }
 
         public override void Send(string message)

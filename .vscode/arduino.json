@@ -1,0 +1,6 @@
+{
+    "board": "esp8266:esp8266:huzzah",
+    "port": "COM4",
+    "configuration": "CpuFrequency=80,UploadSpeed=115200,FlashSize=4M3M",
+    "sketch": "arduino\\beakn.arduino.huzzah.neopixel\\beakn.arduino.huzzah.neopixel.ino"
+}
