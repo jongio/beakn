@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -15,7 +11,7 @@ namespace beakn
 
         public override void Setup()
         {
-            mqttClient = new MqttClient(Config.MqttHost, Config.MqttPort, false, null);
+            mqttClient = new MqttClient(Config.MqttHost, Config.MqttPort, false, null, null, MqttSslProtocols.None, null, null);
             mqttClient.Connect(Config.MqttClientId, Config.MqttUsername, Config.MqttPassword);
 
             // Subscribe to the topic for debugging purposes
