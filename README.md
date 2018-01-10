@@ -17,3 +17,11 @@ http://blog.jongallant.com/2014/12/beakn-v0-3-diy-lync-status-light.html (Ethern
 
 ##SparkCore
 http://blog.jongallant.com/2014/12/beakn-v0-4-diy-lync-status-light.html (WiFi/SparkCore Cloud)
+
+
+
+## Dev Machine Setup
+
+[Install VS 2017](https://www.visualstudio.com/downloads/)
+
+[Install VS Setup Projects](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects)
